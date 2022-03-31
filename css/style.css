@@ -1,3 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 * {
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    width: 414px;
+    margin: 0 auto;
+    background-color: #E5E5E5;
+}
+
+h1, 
+h2 {
+    font-family: 'Righteous', cursive;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    padding-left: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+}
+
+header h1 {
+    color: white;
+    font-size: 44px;
+}
+
+header p {
+    color: white;
+    font-size: 18px;
+}
+
+main {
+    margin-top: 120px;
+    padding-left: 20px;
+    margin-bottom: 92px;
+}
+
+main h2 {
+    font-size: 26px;
+    color:#333333;
+}
+
+.selecao {
+    display: flex;
+    overflow: auto;
+    margin-top: 17px;
+    margin-bottom: 27px;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.selecao::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+  }
+
+.sobremesa .selecao {
+    margin-bottom: 15px;
+}
+
+.opcao {
+    width: 172px;
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    margin-right: 16px;
+    padding: 18px 14px 14px 14px;
+    cursor: pointer;
+}
+
+.opcao img {
+    width: 144px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.opcao h3 {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.opcao h4 {
+    color: #000000;
+    font-size: 16px;
+}
+
+.opcao h5 {
+    color: #A6A6A6;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.barra-pedido {
+    width: 414px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    position: fixed;
+    bottom: 0;
+}
+
+.barra-pedido button {
+    width: 364px;
+    height: 61px;
+    background-color: #CBCBCB;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: not-allowed;
 }
