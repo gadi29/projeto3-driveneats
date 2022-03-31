@@ -60,6 +60,7 @@ main h2 {
 .selecao {
     display: flex;
     overflow: auto;
+    overflow-x: scroll;
     margin-top: 17px;
     margin-bottom: 27px;
     -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
