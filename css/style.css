@@ -138,7 +138,7 @@ main h2 {
 }
 
 .bloqueado {
-    width: 364px;
+    width: 340px;
     height: 61px;
     background-color: #CBCBCB;
     border: none;
@@ -152,7 +152,7 @@ main h2 {
 
 .habilitado {
     display: none;
-    width: 364px;
+    width: 340px;
     height: 61px;
     background-color: #32B72F;
     border: none;
@@ -192,7 +192,7 @@ main h2 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 377px;
+    width: 340px;
     background-color: #50D074;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
@@ -234,7 +234,7 @@ main h2 {
 .zap button {
     background-color: #FFFFFF;
     border: none;
-    width: 329px;
+    width: 300px;
     height: 52px;
     margin-top: 25px;
     border-radius: 100px;
