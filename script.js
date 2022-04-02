@@ -87,12 +87,18 @@ function pedidoZap() {
     precoFinal = precoPrato + precoBebida + precoSobremesa;
     precoFinal = precoFinal.toFixed(2);
 
+    const nome = prompt("Qual seu nome?")
+    const endereco = prompt("Qual seu endereço?")
+
     let uri = 
     `Olá, gostaria de fazer o pedido:
     - Prato: ${nomePrato}
     - Bebida: ${nomeBebida}
     - Sobremesa: ${nomeSobremesa}
-    Total: R$ ${precoFinal}`;
+    Total: R$ ${precoFinal}
+    
+    Nome: ${nome}
+    Endereço: ${endereco}`;
 
     let encoded = encodeURIComponent(uri);
 
