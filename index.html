@@ -98,7 +98,30 @@
         </main>
         <div class="barra-pedido">
             <button class="bloqueado">Selecione os 3 itens para fechar o pedido</button>
-            <a href="" target="_blank"><button class="habilitado" onclick="pedidoZap()">Fechar Pedido</button></a>
+            <button class="habilitado" onclick="janelaConfirmacao()">Fechar Pedido</button>
+        </div>
+        <div class="background esconder">
+            <div class="janela-confirmacao">
+                <h3>Confirme seu pedido</h3>
+                <div class="info-prato">
+                    <h4>Prato</h4>
+                    <h5>Valor</h5>
+                </div>
+                <div class="info-bebida">
+                    <h4>Bebida</h4>
+                    <h5>Valor</h5>
+                </div>
+                <div class="info-sobremesa">
+                    <h4>Sobremesa</h4>
+                    <h5>Valor</h5>
+                </div>
+                <div class="total">
+                    <h3>TOTAL</h3>
+                    <h4>Valor</h4>
+                </div>
+                <a href="http://" target="_blank" class="zap"><button onclick="pedidoZap()">Tudo certo, pode pedir!</button></a>
+                <button onclick="cancelarPedido()">Cancelar</button>
+            </div>
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

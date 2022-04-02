@@ -7,7 +7,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
 }
 
 a {
@@ -20,6 +19,7 @@ a {
     width: 414px;
     margin: 0 auto;
     background-color: #E5E5E5;
+    position: relative;
 }
 
 h1, 
@@ -164,14 +164,6 @@ main h2 {
     cursor: pointer;
 }
 
-.esconder {
-    display: none;
-}
-
-.aparecer {
-    display: initial;
-}
-
 .selecionado {
     border: 5px solid #32B72F;
 }
@@ -183,4 +175,79 @@ main h2 {
     bottom: 10px;
     left: 135px;
     color: #32B72F;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.janela-confirmacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 377px;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 25px;
+    position: fixed;
+    top: 22%;
+}
+
+.janela-confirmacao h4, h5 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.janela-confirmacao h3, .total h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.info-prato, .info-bebida, .info-sobremesa, .total {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.janela-confirmacao button {
+    background-color: #50D074;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.zap button {
+    background-color: #FFFFFF;
+    border: none;
+    width: 329px;
+    height: 52px;
+    margin-top: 25px;
+    border-radius: 100px;
+    color: #50D074;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.esconder {
+    display: none;
+}
+
+.aparecer {
+    display: initial;
 }

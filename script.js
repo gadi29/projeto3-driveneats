@@ -82,13 +82,30 @@ function fecharPedido() {
     }
 }
 
-function pedidoZap() {
+function janelaConfirmacao() {
 
     precoFinal = precoPrato + precoBebida + precoSobremesa;
     precoFinal = precoFinal.toFixed(2);
+    precoPrato = precoPrato.toFixed(2);
+    precoBebida = precoBebida.toFixed(2);
+    precoSobremesa = precoSobremesa.toFixed(2);
+    
+    document.querySelector(".janela-confirmacao").querySelector(".info-prato h4").innerHTML = nomePrato;
+    document.querySelector(".janela-confirmacao").querySelector(".info-prato h5").innerHTML = precoPrato;
+    document.querySelector(".janela-confirmacao").querySelector(".info-bebida h4").innerHTML = nomeBebida;
+    document.querySelector(".janela-confirmacao").querySelector(".info-bebida h5").innerHTML = precoBebida;
+    document.querySelector(".janela-confirmacao").querySelector(".info-sobremesa h4").innerHTML = nomeSobremesa;
+    document.querySelector(".janela-confirmacao").querySelector(".info-sobremesa h5").innerHTML = precoSobremesa;
+    document.querySelector(".janela-confirmacao").querySelector(".total h4").innerHTML = precoFinal;
 
-    const nome = prompt("Qual seu nome?")
-    const endereco = prompt("Qual seu endereço?")
+    let abrir = document.querySelector(".background");
+    abrir.classList.remove("esconder");
+}
+
+function pedidoZap() {
+
+    const nome = prompt("Qual seu nome?");
+    const endereco = prompt("Qual seu endereço?");
 
     let uri = 
     `Olá, gostaria de fazer o pedido:
@@ -102,5 +119,21 @@ function pedidoZap() {
 
     let encoded = encodeURIComponent(uri);
 
-    document.querySelector(".barra-pedido a").href = `https://wa.me/5548996629438?text=${encoded}`;
+    document.querySelector(".janela-confirmacao a").href = `https://wa.me/5548996629438?text=${encoded}`;
+}
+
+function cancelarPedido() {
+    
+    document.querySelector(".prato-principal").querySelector(".selecionado").classList.remove("selecionado");
+    document.querySelector(".bebida").querySelector(".selecionado").classList.remove("selecionado");
+    document.querySelector(".sobremesa").querySelector(".selecionado").classList.remove("selecionado");
+    document.querySelector(".habilitado").classList.remove("aparecer");
+    document.querySelector(".bloqueado").classList.remove("esconder");
+
+    botaoPrato = null;
+    botaoBebida = null;
+    botaoSobremesa = null;
+
+    let abrir = document.querySelector(".background");
+    abrir.classList.add("esconder");
 }
