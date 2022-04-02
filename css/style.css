@@ -117,11 +117,6 @@ main h2 {
 }
 
 .opcao ion-icon {
-    font-size: 20px;
-    position: absolute;
-    bottom: 10px;
-    left: 135px;
-    color: #32B72F;
     display: none;
 }
 
@@ -147,4 +142,21 @@ main h2 {
     color: #FFFFFF;
     text-align: center;
     cursor: not-allowed;
+}
+
+.esconder {
+    display: none;
+}
+
+.selecionado {
+    border: 5px solid #32B72F;
+}
+
+.selecionado ion-icon {
+    display: initial;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 135px;
+    color: #32B72F;
 }
